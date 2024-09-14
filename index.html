@@ -59,24 +59,36 @@
 <!-- Projects Section -->
 <section id="projects" class="projects">
     <div class="container">
-        <h2>Our Latest Projects</h2>
+        <h2>Our Projects</h2>
         <div class="project-list">
             <div class="project-item">
-                <h3>Disaster Management with Drones</h3>
-                <p>Using drone technology for disaster management, we help locate victims and deliver supplies in emergencies. With two drones, we map locations and gather crucial data for rescue efforts.</p>
+                <h3>Disaster Management using Drone</h3>
+                <p>Using drone technology for disaster management, we help locate victims and deliver supplies in emergencies.</p>
+                <div class="project-more" style="display: none;">
+                    <p>With two drones, we map locations and gather crucial data for rescue efforts. Drone 1 detects people and Drone 2 delivers supplies based on the information gathered.</p>
+                </div>
+                <button class="project-btn" onclick="toggleContent(this)">Learn More</button>
             </div>
             <div class="project-item">
                 <h3>Smart Emergency Messenger</h3>
-                <p>Our messenger automatically detects emergencies and sends real-time alerts, enhancing safety through quick response systems. It includes features like location tracking for remote areas and accident detection.</p>
+                <p>Our messenger automatically detects emergencies and sends real-time alerts, enhancing safety through quick response systems.</p>
+                <div class="project-more" style="display: none;">
+                    <p>It includes features like location tracking for remote areas and accident detection to provide immediate assistance.</p>
+                </div>
+                <button class="project-btn" onclick="toggleContent(this)">Learn More</button>
             </div>
             <div class="project-item">
                 <h3>Anti-Drone Technology</h3>
-                <p>This project involves advanced tracking and neutralization techniques for drones, aimed at protecting critical areas from UAV threats using sensors and machine learning.</p>
+                <p>This project involves advanced tracking and neutralization techniques for drones, aimed at protecting critical areas from UAV threats.</p>
+                <div class="project-more" style="display: none;">
+                    <p>We use sensors and machine learning algorithms to detect and disable unauthorized drones efficiently.</p>
+                </div>
+                <button class="project-btn" onclick="toggleContent(this)">Learn More</button>
             </div>
         </div>
     </div>
 </section>
-
+    
 <!-- Team Members Section -->
 <center>
 <section id="aim" class="aim">
@@ -100,6 +112,20 @@
 <footer>
     <p>&copy; 2024 Gear Five Developers. All rights reserved.</p>
 </footer>
+
+<!-- JavaScript goes here -->
+    <script>
+        function toggleContent(button) {
+            const moreContent = button.previousElementSibling;
+            if (moreContent.style.display === "none") {
+                moreContent.style.display = "block";
+                button.textContent = "Show Less";
+            } else {
+                moreContent.style.display = "none";
+                button.textContent = "Learn More";
+            }
+        }
+    </script>
 
 </body>
 </html>
